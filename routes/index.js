@@ -25,7 +25,7 @@ exports.title = function (db) {
     var collection = db.get('titles');
     if (req.params.name) {
       collection.findOne({"TitleName": req.params.name}, function (e, doc) {
-        res.json('titleDetails', doc);
+        res.json(doc);
       });
     }
   };
