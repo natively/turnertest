@@ -31,22 +31,14 @@ em.list:last-child:after {
 .well {
   background-color: #d9d4e2;
 }
-li.glow {
-  /*border-bottom: 1px solid #534c5e;*/
-  /*border-left: 1px solid #543c5e;*/
-  /*border-right: 1px solid #543c5e;*/
-}
-li.glow:first-child {
-  /*border-top: 1px solid #543c53;*/
-}
 
 .pad-left {
   padding-left: 9px;
-}
-.pad-left:hover {
-  padding-left: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
+}
+.pad-left:hover {
+  padding-left: 18px;
 }
 /* fancy effect */
 .glow {
