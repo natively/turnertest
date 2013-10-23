@@ -3,9 +3,11 @@ body {
   background-color: #edebf1;
   color: #3d3942;
 }
+
 @media screen and (max-width: 980px) {
-    body { padding-top: 0px; }
+    body { padding-top: 0; }
 }
+
 a {
   color: #534c5e;
   cursor: pointer;
@@ -43,17 +45,11 @@ em.list:last-child:after {
 /* fancy effect */
 .glow {
   cursor:pointer;
-  transition-property: color;
+  transition-property: color, background-color;
   transition-duration: 0.25s;
-  -webkit-transition-property: color;
+  -webkit-transition-property: color, background-color;
   -webkit-transition-duration: 0.25s;
-  -moz-transition-property: color;
-  -moz-transition-duration: 0.25s; 
-  transition-property: background-color;
-  transition-duration: 0.25s;
-  -webkit-transition-property: background-color;
-  -webkit-transition-duration: 0.25s;
-  -moz-transition-property: background-color;
+  -moz-transition-property: color, background-color;
   -moz-transition-duration: 0.25s; 
 }
 .glow:hover {
