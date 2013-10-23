@@ -1,5 +1,5 @@
 Code test for TEN interview
-[Hosted on Heroku](turnertest.heroku.com)
+[Hosted on Heroku](http://turnertest.heroku.com)
 
 Stack
 =====
