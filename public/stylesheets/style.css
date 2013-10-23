@@ -1,6 +1,6 @@
 body {
   padding-top:60px;
-  background-color: #dcd8e2;
+  background-color: #edebf1;
   color: #3d3942;
 }
 @media screen and (max-width: 980px) {
@@ -29,7 +29,7 @@ em.list:last-child:after {
   content: "";
 }
 .well {
-  background-color: #d9d4e2;
+  background-color: #eae5f1;
 }
 
 .pad-left {
