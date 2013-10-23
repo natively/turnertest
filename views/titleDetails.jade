@@ -1,0 +1,37 @@
+.right.span9(data-bind="with:details")
+  h4
+    span(data-bind="text: $data.TitleName+' '")
+    span(data-bind="if: $parent.imdbLink()").small
+      a(data-bind="attr: { href: $parent.imdbLink() }") (imdb link)
+  h5
+    span Year: 
+    span(data-bind="text: $data.ReleaseYear")
+  h5
+    span Genres: 
+    span(data-bind="foreach: $data.Genres")
+      em(data-bind="text: $data").list.small
+  h5
+    span Produced by: 
+    span(data-bind="foreach: $parent.getParticipentsBy('Producer')")
+      em(data-bind="text: $data.Name").list.small
+  h5
+    span Directed by: 
+    span(data-bind="foreach: $parent.getParticipentsBy('Director')")
+      em(data-bind="text: $data.Name").list.small
+  h5
+    span Starring: 
+    span(data-bind="foreach: $parent.getParticipentsBy('Actor')")
+      em(data-bind="text: $data.Name").list.small
+  h5(style="display:inline;") Description:
+  p(data-bind="text: Storylines[0].Description")
+  div(data-bind="with: $parent.getAcademyAwards()")
+    h5 Academy Awards
+    ul(data-bind="foreach: $data")
+      li
+        span(data-bind="if: $data.Participants")
+          span(data-bind="foreach: Participants")
+            em(data-bind="text: $data+', '").strong
+        span(data-bind="text: Award")
+        span(data-bind="ifnot: $data.AwardWon")
+          em &nbsp;(nominated)
+

@@ -1,0 +1,39 @@
+
+/*
+ * GET home page.
+ */
+
+exports.index = function(req, res){
+  res.render('index', { title: 'Express' });
+};
+
+exports.helloworld = function(req, res) {
+  res.render('index', { title: 'Hello, World!' });
+};
+
+exports.titleList = function(db) {
+  return function(req, res) {
+    if (req.query.name) {
+      console.log(req.query.name):
+      var collection = db.get("titles");
+      collection.find({ TitleName: { $regex: '^[.*]'+req.query.name+'[.*]$', $options: 'i' } }, function(e, docs) {
+        console.log(docs);
+        res.render('titleList', {
+          "titles": docs
+        });
+      });
+    }
+  };
+};
+
+exports.title = function(db) {
+  return function(req, res) {
+    console.log(req.params);
+    var collection = db.get('titles');
+    if (req.params.name) {
+      collection.find({"TitleName": req.params.name}, function(e, docs) {
+        res.render('titleDetails', doc );
+      });
+    }
+  }
+};

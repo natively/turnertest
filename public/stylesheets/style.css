@@ -1,0 +1,39 @@
+body {
+  background-color: #dcd8e2;
+  color: #3d3942;
+}
+
+a {
+  color: #534c5e;
+  cursor: pointer;
+}
+a:hover, a:visited { color: #3d3942; }
+
+li.glow { padding-left: 9px; }
+
+.strong { font-weight: bold; }
+.small { font-size: 12px; }
+em.small { color: #534c5e; }
+em.list:after { content: ", "; }
+em.list:last-child:after { content: ""; }
+
+.glow {
+  cursor:pointer;
+  transition-property: color;
+  transition-duration: 0.25s;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-property: color;
+  -moz-transition-duration: 0.25s; 
+  transition-property: background-color;
+  transition-duration: 0.25s;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-property: background-color;
+  -moz-transition-duration: 0.25s; 
+}
+.glow:hover {
+  background-color: #553b80;
+  color: #bbb5c5;
+}
+
