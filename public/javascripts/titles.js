@@ -31,13 +31,13 @@ $(function () {
       return undefined;
     },
 
-    // search event:
-    search: function () {
-      var query = $('.search-query').val();
+    // auto-updating search event, throttled to 400ms:
+    search: _.throttle(function () {
+      var query = $('.search').val();
       $.getJSON("/titles?name=" + query, function (data) {
         viewModel.titles(data);
       });
-    },
+    }, 400),
 
     // fetches and draws the details for a specific title
     setDetails: function (title) {

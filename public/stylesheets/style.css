@@ -1,22 +1,54 @@
 body {
+  padding-top:60px;
   background-color: #dcd8e2;
   color: #3d3942;
 }
-
+@media screen and (max-width: 980px) {
+    body { padding-top: 0px; }
+}
 a {
   color: #534c5e;
   cursor: pointer;
 }
-a:hover, a:visited { color: #3d3942; }
+a:hover, a:visited {
+  color: #3d3942;
+}
+.strong {
+  font-weight: bold;
+}
+.small {
+  font-size: 12px;
+}
+em.small {
+  color: #534c5e;
+}
+em.list:after {
+  content: ", ";
+}
+em.list:last-child:after {
+  content: "";
+}
+.well {
+  background-color: #d9d4e2;
+}
+li.glow {
+  /*border-bottom: 1px solid #534c5e;*/
+  /*border-left: 1px solid #543c5e;*/
+  /*border-right: 1px solid #543c5e;*/
+}
+li.glow:first-child {
+  /*border-top: 1px solid #543c53;*/
+}
 
-li.glow { padding-left: 9px; }
-
-.strong { font-weight: bold; }
-.small { font-size: 12px; }
-em.small { color: #534c5e; }
-em.list:after { content: ", "; }
-em.list:last-child:after { content: ""; }
-
+.pad-left {
+  padding-left: 9px;
+}
+.pad-left:hover {
+  padding-left: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+/* fancy effect */
 .glow {
   cursor:pointer;
   transition-property: color;

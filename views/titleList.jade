@@ -1,7 +1,7 @@
 .left.span3
   h4 Title Search
   form.form-search
-    input(type="text" placeholder="search" data-bind="event: { keyup: search }").input-medium.search-query
-  ul(data-bind="foreach: titles").unstyled
-    li(data-bind="text: TitleName, click: $parent.setDetails").glow
+    input(type="text" placeholder="search" data-bind="event: { keyup: search }").search.span3
+  ul(data-bind="foreach: titles").unstyled.well
+    li(data-bind="text: TitleName, click: $parent.setDetails").glow.pad-left
 
